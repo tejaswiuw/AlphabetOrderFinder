@@ -35,5 +35,3 @@ Following are some of the testcases that validates the correctness of the progra
 | Incomplete array of words with one word (invalid input)| {"git"}     |   (any order of characters) |
 | Incomplete array of words with length more than 1 (invalid input)| {"itg", "tig"}     |   (any order of characters) |
 | Array of words with complete information (valid input) | {"bca", "aaa", "acb"} |    ['b', 'a', 'c'] |
-
-*/

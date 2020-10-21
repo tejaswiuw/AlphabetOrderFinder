@@ -18,18 +18,27 @@ class AlphabetOrderFinder {
      * @return List of characters ordered alphabetically
     */
   public static List <Character> findOrder(String[] words) {
-
+    
+    // List to store the final ordered list of characters
+    List <Character> orderedList = new ArrayList <Character>();
+    
+    // Input validation!
+    if (words == null){
+      return orderedList;
+    }
+      
     // Map to track indegree
     HashMap<Character,Integer> indegree = new HashMap<>();
     
     // Map that serves as an adjacency List
     HashMap<Character, List<Character>> adjList = new HashMap<>();
-    
-    // List to store the final ordered list of characters
-    List <Character> orderedList = new ArrayList <Character>();
-
+      
     // Intialize the data structures
     for (int i = 0; i < words.length; i++) {
+      if (words[i] == null){
+        // Input validation - one of input words is null!
+        return orderedList;
+      }
       char[] ch = words[i].toCharArray();
       for (int j = 0; j < ch.length; j++) {
         indegree.put(ch[j], 0);
